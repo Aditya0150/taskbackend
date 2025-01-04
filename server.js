@@ -8,3 +8,6 @@ dotenv.config();
 const PORT = process.env.PORT;
 const URI = process.env.URI;
 
+connectMongoDB(URI).then(()=> console.log("database connected"));
+
+app.listen(PORT, (req, res) => console.log(`Running at port ${PORT}`));
